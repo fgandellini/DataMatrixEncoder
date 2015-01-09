@@ -109,25 +109,4 @@ namespace DataMatrixEncoder
     {
         public IDataMatrix DataMatrixDescriptor;
     }
-
-    public class DataMatrixCipFieldRule : ValidationRule
-    {
-        public DataMatrixCipFieldRule()
-        {
-        }
-
-        public override ValidationResult Validate(object value, CultureInfo cultureInfo)
-        {
-            try
-            {
-                GtinDataMatrixField field = new GtinDataMatrixField("CIP", (string)value);
-                field.Validate();
-                return new ValidationResult(true, null);
-            }
-            catch (Exception e)
-            {
-                return new ValidationResult(false, e.Message);
-            }
-        }
-    }
 }

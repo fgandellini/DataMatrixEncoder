@@ -39,15 +39,7 @@
 				Custom:TextBoxHelper.Watermark="cip" 
 				HorizontalAlignment="Stretch" 
 				VerticalAlignment="Top"
-				Margin="5">
-            <TextBox.Text>
-                <Binding RelativeSource="{RelativeSource Self}" Path="Text" UpdateSourceTrigger="PropertyChanged">
-                    <Binding.ValidationRules>
-                        <component:DataMatrixCipFieldRule/>
-                    </Binding.ValidationRules>
-                </Binding>
-            </TextBox.Text>
-        </TextBox>
+				Margin="5"/>
         <Label Grid.Row="2"
 				Grid.Column="0"
 				Margin="5"
