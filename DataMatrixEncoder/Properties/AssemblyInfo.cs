@@ -8,9 +8,9 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("DataMatrixEncoder")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Encoder for DataMatrix")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Sagef di Gandellini Giacomo & C. s.n.c.")]
 [assembly: AssemblyProduct("DataMatrixEncoder")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]

@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("DataMatrixEncoderLibTest")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Encoder Library for DataMatrix - Test")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Sagef di Gandellini Giacomo & C. s.n.c.")]
 [assembly: AssemblyProduct("DataMatrixEncoderLibTest")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
