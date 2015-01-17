@@ -16,7 +16,20 @@ namespace DataMatrixEncoderLib
     public class DataMatrixField : IDataMatrixField
     {
         public string Name { get; set; }
-        public string Value { get; set; }
+
+        private string internalValue = "";
+        public string Value 
+        { 
+            get 
+            {
+                return internalValue;
+            }
+            set 
+            {
+                internalValue = value.Trim();
+            }
+        }
+        
         public string AiCode { get; set; }
         public string AiName { get; set; }
         public int MinLength { get; set; }

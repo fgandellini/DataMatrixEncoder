@@ -132,7 +132,7 @@ namespace DataMatrixEncoderLibTest
             };
             contentManager.Parse(dm);
         }
-        
+
         [TestMethod]
         public void ContentManager_Should_ParseArgs()
         {
@@ -194,6 +194,22 @@ namespace DataMatrixEncoderLibTest
             };
             string content = contentManager.Parse(dm).ToString();
             Assert.AreEqual(ContentManager.FNC1 + "01123456789012341712340010LOT", content);
+        }
+
+        [TestMethod]
+        public void ContentManager_Should_TrimSpacesFromFields()
+        {
+            IDataMatrix dm = new DataMatrix()
+            {
+                Fields = new System.Collections.Generic.List<IDataMatrixField>() 
+                { 
+                    new GtinDataMatrixField("CIP", "  12345678901234  "),
+                    new ExpDataMatrixField("EXP", "  123456  "),
+                    new LotDataMatrixField("LOT", "  LOT  ")
+                }
+            };
+            string content = contentManager.Parse(dm).ToString();
+            Assert.AreEqual(ContentManager.FNC1 + "01123456789012341712345610LOT", content);
         }
 
         [TestMethod]
