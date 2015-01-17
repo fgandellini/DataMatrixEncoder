@@ -53,10 +53,13 @@ namespace DataMatrixEncoder
                     .SetContent(contentManager.Parse(dmArgs.DataMatrixDescriptor).ToString())
                     .Encode();
 
-                string filename = string.Format("{0}_{1}_{2}_{3}.png",
+                string filename = string.Format("{0}_{1}_{2}_{3}_{4}_{5}_{6}.png",
                     DateTime.Now.ToString("yyyyMMddHHmmss"),
+                    dmArgs.DataMatrixDescriptor.Fields.First(f => f.Name == "CIP").AiCode,
                     dmArgs.DataMatrixDescriptor.Fields.First(f => f.Name == "CIP").Value,
+                    dmArgs.DataMatrixDescriptor.Fields.First(f => f.Name == "Scadenza").AiCode,
                     dmArgs.DataMatrixDescriptor.Fields.First(f => f.Name == "Scadenza").Value,
+                    dmArgs.DataMatrixDescriptor.Fields.First(f => f.Name == "Lotto").AiCode,
                     dmArgs.DataMatrixDescriptor.Fields.First(f => f.Name == "Lotto").Value);
 
                 string path = System.IO.Path.Combine(
